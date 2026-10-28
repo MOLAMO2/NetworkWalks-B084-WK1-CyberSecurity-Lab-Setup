@@ -84,3 +84,9 @@ A safe, isolated and repeatable environment for learning cybersecurity by doing,
 
 • Kali Linux 2026.3 running in VirtualBox
 
+**2 · Create the NAT Network.** **File → Tools → Network Manager → NAT Networks → Create**, name `NatNetwork`, prefix `10.0.0.0/24`. Then attach the VM: **Settings → Network → Adapter 1 → NAT Network → `NatNetwork`**.
+<img width="1901" height="1187" alt="virtualbox-nat-network" src="https://github.com/user-attachments/assets/5b2bdbdd-497a-4dd3-bf62-907069b2c318" />
+• NatNetwork · 10.0.0.0/24 · DHCP enabled
+
+
+
