@@ -81,7 +81,7 @@ A safe, isolated and repeatable environment for learning cybersecurity by doing,
 **1 · Add the VM.** Extract the Kali archive with 7-Zip or WinRAR, then use **Machine → Add** in VirtualBox and boot it.
 
 <img width="1895" height="997" alt="kali-desktop " src="https://github.com/user-attachments/assets/f1da37d3-ff41-4e0e-b7eb-c9fc736be369" />
-#
+
 <img width="1915" height="1185" alt="kali-desktop" src="https://github.com/user-attachments/assets/3690a7bf-7fbd-408f-9028-75d03131df5d" />
 
 
