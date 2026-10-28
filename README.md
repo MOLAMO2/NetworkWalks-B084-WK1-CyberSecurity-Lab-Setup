@@ -131,3 +131,40 @@ curl -I https://google.com     # HTTPS
 • Live tests (left) and the generated report (right)
 
 ---
+
+# · Troubleshooting, Snapshot and Wrap-up
+
+## 🧯 Troubleshooting
+
+| Mistake | What happened | Lesson |
+| --- | --- | --- |
+| `"10.0.0.1 "` (space inside quotes) | `Name or service not known` | The IP became an invalid hostname |
+| `google,com` and missing `-c` | `Name or service not known` | Typos break name resolution |
+| `googlr.com` | Replied normally | Misspelled domains can exist, which is how typosquatting works |
+
+![Troubleshooting]<img width="1041" height="1197" alt="ip-route-and-troubleshooting" src="https://github.com/user-attachments/assets/25010f8f-b4cf-4f66-be13-18a3e069c447" />
+
+• Errors, fixes and the final route check
+
+## 📸 Snapshot
+
+Snapshot `Kali-2026-baseline-network configured` preserves the working lab. The tree also holds `Fresh Installation` and `New Patch update`.
+
+![Snapshots]<img width="1656" height="1197" alt="virtualbox-snapshots" src="https://github.com/user-attachments/assets/fe2c3f13-3b0a-4b7d-a7e5-411c431c3d6d" />
+
+VirtualBox Snapshots tab
+
+## 🔐 Safe Use
+
+> \[!WARNING\] Authorised, ethical learning only. Test only systems you own or have written permission to assess, keep the lab isolated, snapshot before big changes and never commit credentials.
+
+## ⏭️ Reference 
+
+- [ ] Sponsored by: NetworkWalks Academy
+- [ ] Mentor and Instructor: Waqas Karim (CCIE)
+- [ ] Email: waqasulkarim@gmail.com
+
+---
+
+⚡ **Learning • Practicing • Securing** ⚡\
+🎓 NetworkWalks CyberSecurity Training · Batch B084 · **Author:** Molamo
