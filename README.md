@@ -86,10 +86,48 @@ A safe, isolated and repeatable environment for learning cybersecurity by doing,
 
 **2 · Create the NAT Network.** **File → Tools → Network Manager → NAT Networks → Create**, name `NatNetwork`, prefix `10.0.0.0/24`. Then attach the VM: **Settings → Network → Adapter 1 → NAT Network → `NatNetwork`**.
 <img width="1901" height="1187" alt="virtualbox-nat-network" src="https://github.com/user-attachments/assets/5b2bdbdd-497a-4dd3-bf62-907069b2c318" />
+#
 <img width="1917" height="1198" alt="image" src="https://github.com/user-attachments/assets/baa9738c-5fc7-4d4f-a59d-6a6aa038db45" />
 
 • NatNetwork · 10.0.0.0/24 · DHCP enabled
 
 **3 · Set the static IP.** In Kali, edit the Ethernet connection (`LabTest`) → **IPv4 Settings** → Method **Manual**: address `10.0.0.2`, netmask `24`, gateway `10.0.0.1`, DNS `10.0.0.1`.
 
+<img width="1911" height="1166" alt="ipv4-manual-settings" src="https://github.com/user-attachments/assets/b2938ecb-25c5-4fff-81b1-4846ddb7fe9f" />
 
+• NetworkManager manual IPv4 profile
+
+> \[!NOTE\] The NAT Network keeps its DHCP server on, but Kali bypasses it with the manual address. Pick static addresses deliberately to avoid clashes.
+
+---
+
+# · Verification
+
+## 📡 Test Connectivity
+
+Test from the inside out, so a failure shows which layer is broken:
+
+```bash
+ip -br addr && ip route        # address and default route (expect: default via 10.0.0.1 proto static)
+ping -c 4 10.0.0.1             # gateway
+ping -c 4 8.8.8.8              # internet by IP
+nslookup google.com            # DNS through 10.0.0.1
+curl -I https://google.com     # HTTPS
+```
+
+## ✅ Results
+
+| Test | Result | Detail |
+| --- | --- | --- |
+| 🚪 Gateway | ✅ | 4/4 packets, \~1.5 ms |
+| 🌍 Internet | ✅ | `8.8.8.8` and `1.1.1.1`, \~5–7 ms |
+| 🔎 DNS | ✅ | Served by `10.0.0.1`, IPv4 and IPv6 answers |
+| 🔒 HTTPS | ✅ | `HTTP/2 301` → `https://www.google.com/` |
+
+#
+**0% packet loss** on every test. A timestamped report, `network_test_20261027_162420.log`, was saved to the Desktop (Tue Oct 27 2026, 04:24 PM EDT).
+![Connectivity tests and log]<img width="1917" height="1147" alt="connectivity-tests-and-log" src="https://github.com/user-attachments/assets/4c291580-9e84-4e6b-a254-c1589b5efab7" />
+
+• Live tests (left) and the generated report (right)
+
+---
