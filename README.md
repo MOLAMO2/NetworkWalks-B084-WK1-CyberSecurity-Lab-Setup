@@ -32,7 +32,7 @@ Week 1 builds the foundation of the lab: **Kali Linux 2026.3** on **Oracle Virtu
         │
         ▼
 🐉 Kali Linux 2026.3
-   IP: 10.0.0.2
+   IP: X.X.X.X
         │
         ▼
 🚪 Gateway / DNS
@@ -61,7 +61,7 @@ A safe, isolated and repeatable environment for learning cybersecurity by doing,
 | 💻 **Host** | Windows 11 · VirtualBox 7.2.22 |
 | 🐉 **Guest** | Kali Linux 2026.3 (`kali-linux-2026.3-virtualbox-amd64`) |
 | 🌐 **Network** | NAT Network `NatNetwork` · `10.0.0.0/24` · DHCP server enabled |
-| 📍 **Kali IP** | `10.0.0.2/24` on `eth0` · method **Manual** · profile `LabTest` |
+| 📍 **Kali IP** | `X.X.X.X/24` on `eth0` · method **Manual** · profile `LabTest` |
 | 🚪 **Gateway / DNS** | `10.0.0.1` |
 
 ## 📋 Requirements
