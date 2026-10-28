@@ -75,3 +75,12 @@ A safe, isolated and repeatable environment for learning cybersecurity by doing,
 | ✅ | **Kali Linux 2026.3** VirtualBox image | The security workstation VM |
 
 > \[Be Alert\] Hardware virtualization (Intel VT-x / AMD-V) must be enabled in BIOS/UEFI to run a 64-bit guest.
+
+## 🪜 Setup
+
+**1 · Add the VM.** Extract the Kali archive with 7-Zip or WinRAR, then use **Machine → Add** in VirtualBox and boot it.
+
+<img width="1895" height="997" alt="kali-desktop " src="https://github.com/user-attachments/assets/f1da37d3-ff41-4e0e-b7eb-c9fc736be369" />
+
+• Kali Linux 2026.3 running in VirtualBox
+
